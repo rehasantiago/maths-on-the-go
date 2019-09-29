@@ -15,8 +15,6 @@ const UserSchema = new Schema({
         type:String,
         required:true
     },
-<<<<<<< HEAD
-=======
     level1:{
         type:Number,
         default:0
@@ -41,7 +39,6 @@ const UserSchema = new Schema({
         type:Number,
         default:0
     },
->>>>>>> 2568f5a11c56575d3740806db9b69ca3443a94ae
     date:{
         type:Date,
         default:Date.now

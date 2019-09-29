@@ -35,9 +35,6 @@ router.post('/register',(req,res) => {
                 newUser.password = hash;
                 newUser
                   .save()
-<<<<<<< HEAD
-                  .then(user => res.json(user))
-=======
                   .then(user => {
                     const payload = {
                       id:user.id,
@@ -60,7 +57,6 @@ router.post('/register',(req,res) => {
                       }
                     )
                   })
->>>>>>> 2568f5a11c56575d3740806db9b69ca3443a94ae
                   .catch(err => console.log(err));
               });
             });
@@ -91,22 +87,14 @@ router.post("/login", (req, res) => {
             payload,
             keys.secretOrKey,
             {
-<<<<<<< HEAD
-              expiresIn: 31556926 // 1 year in seconds
-=======
               expiresIn: '48h',
               algorithm:'HS384' // 1 year in seconds
->>>>>>> 2568f5a11c56575d3740806db9b69ca3443a94ae
             },
             (err, token) => {
               res.json({
                 success: true,
-<<<<<<< HEAD
-                token: "Bearer   " + token
-=======
                 user,
                 token: "Bearer " + token
->>>>>>> 2568f5a11c56575d3740806db9b69ca3443a94ae
               });
             }
           );
